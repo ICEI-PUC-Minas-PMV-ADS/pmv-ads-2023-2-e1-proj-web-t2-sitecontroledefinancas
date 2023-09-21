@@ -5,9 +5,7 @@ Esta seção descreve a organização da equipe para a execução das tarefas do
 
 
 ## Gerenciamento de Projeto
-A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, pois como citam Amaral, Fleury e Isoni (2019, p. 68), seus benefícios são a
-
-“visão clara dos resultados a entregar; ritmo e disciplina necessários à execução; definição de papéis e responsabilidades dos integrantes do projeto (Scrum Owner, Scrum Master e Team); empoderamento dos membros da equipe de projetos para atingir o desafio; conhecimento distribuído e compartilhado de forma colaborativa; ambiência favorável para crítica às ideias e não às pessoas.”
+A metodologia ágil adotada para este projeto é o SCRUM, uma abordagem de desenvolvimento de software criada por Jeff Sutherland na década de 1990. O SCRUM se baseia em conceitos tradicionais da engenharia de produção, valorizando times pequenos, multidisciplinares e autogerenciáveis no desenvolvimento de produtos (BESSA, 2018). Além das características mencionadas anteriormente, outros fatores que influenciaram na escolha dessa metodologia para o desenvolvimento do projeto foram: sua flexibilidade, estímulo à colaboração eficaz entre equipes e partes interessadas, habilidade ágil de se adaptar a mudanças e fornecer incrementos de valor contínuos ao cliente. O SCRUM promove transparência, inspeção e adaptação constantes, assegurando a entrega de um produto final alinhado às necessidades do usuário.
 
 ### Divisão de Papéis
 

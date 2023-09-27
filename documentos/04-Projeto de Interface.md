@@ -21,7 +21,7 @@ No menu à esquerda, estão disponíveis a "Logomarca do Site" e  as opções de
 Na parte superior do site, são exibidos dados essenciais como “Saldo”, “Total de despesas”, “Total de Receitas” e Gasto com Cartão de Crédito”, permitindo uma rápida avaliação financeira. No cabeçalho a direita fica o "Nome de Usuário".
 Na parte inferior da página inicial, dois gráficos apresentam a distribuição dos gastos por categoria e as receitas, fornecendo uma representação visual clara dos padrões financeiros. Em resumo, a página inicial é informativa e acessível, permitindo uma visão rápida da situação financeira e uma navegação eficiente pelo site. 
 
-
+[Texto alternativo da imagem](SITE DE FINANÇAS-BAIXA FIDELIDADE.jpg)
 
 A seguir, apresentaremos as telas do site por meio de protótipos de média fidelidade. Estes protótipos fornecerão uma visão mais detalhada e precisa da interface, permitindo uma melhor compreensão da usabilidade e da experiência do usuário.
 

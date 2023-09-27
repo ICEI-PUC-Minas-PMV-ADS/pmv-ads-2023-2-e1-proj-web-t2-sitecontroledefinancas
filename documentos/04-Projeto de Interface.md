@@ -17,7 +17,6 @@ No menu à esquerda, estão disponíveis a "Logomarca do Site" e  as opções de
 Na parte superior do site, são exibidos dados essenciais como “Saldo”, “Total de despesas”, “Total de Receitas” e Gasto com Cartão de Crédito”, permitindo uma rápida avaliação financeira. No cabeçalho a direita fica o "Nome de Usuário".
 Na parte inferior da página inicial, dois gráficos apresentam a distribuição dos gastos por categoria e as receitas, fornecendo uma representação visual clara dos padrões financeiros. Em resumo, a página inicial é informativa e acessível, permitindo uma visão rápida da situação financeira e uma navegação eficiente pelo site. 
 
-
  ![Texto interativo imagem](img/Baixa_Fidelidade.jpg)
 
 A seguir, apresentaremos as telas do site por meio de protótipos de média fidelidade. Estes protótipos fornecerão uma visão mais detalhada e precisa da interface, permitindo uma melhor compreensão da usabilidade e da experiência do usuário.
@@ -42,7 +41,7 @@ A Página inicial do site, oferece uma visão geral das finanças do usuário. N
 
 ### Tela - Despesas
 
-Esta página exibe informações sobre as despesas do usuário. Com ícone que permite adicionar novas despesas, e campo para visualizar despesas a pagar, despesas pendentes e o total das despesas. Além disso, é apresentada uma lista de despesas já registradas no site no lado direito da página.
+Esta página exibe informações sobre as despesas do usuário. Com ícone que permite adicionar "Nova despesas" , e campo para visualizar "Despesas Pagas", "Despesas pendentes" e o "Total das despesas". Além disso, é apresentada uma lista de despesas já registradas no site no lado direito da página.
 
 ![Alt text](img/Despesas.png)
 
@@ -54,7 +53,7 @@ Esta página aparece após clicar no ícone “Nova Despesa” descrito na pági
 
 ### Tela - Receitas
 
-Esta página oferece informações sobre as receitas do usuário. Os ícones e opções permitem adicionar novas receitas, visualizar receitas pendentes, receitas a pagar e o total das receitas. Uma lista de receitas já registradas no site é exibida no lado direito da página.
+Esta página oferece informações sobre as receitas do usuário. Os ícones e opções permitem adicionar "Nova Receita", visualizar "Receitas Recebidas", "REceitas Pendentes" e o  "Total das Receitas". Uma lista de receitas já registradas no site é exibida no lado direito da página.
 
 ![Alt text](img/Receitas.png)
 
@@ -74,7 +73,7 @@ Na página relacionada ao cartão de crédito, os usuários podem adicionar nova
 
 Nesta página, os usuários têm a opção de adicionar um novo cartão de crédito ao seu perfil. Eles podem inserir o nome do cartão, o limite e data do fechamento da fatura
 
-![Alt text](img/Adicionar_cartao.png) <04-Projeto de Interface.md>
+![Alt text](img/Adicionar_cartao.png) 
 
 ### Tela - Adicoinar Despesa do Cartão de Crédito 
 
@@ -87,18 +86,3 @@ Nesta página, os usuários podem cadastrar despesas relacionadas ao seu cartão
  Esta página permite aos usuários atualizarem suas informações pessoais. Ao escolher "Meu Perfil" no menu à esquerda, os usuário são direcionados a um formulário onde podem editar nome, nome social, data de aniversário, email, fonte de renda, escolaridade, profissão, faixa de renda mensal. Ao finalizar as edições, clicam em "Salvar" para garantir que suas informações estejam precisas e atualizadas no site.
 
  ![Alt text](img/Perfil.png)
-
-
-
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
->- Ferramentas:
->> - [Pencil](https://pencil.evolus.vn/)
->> - [MarvelApp](https://marvelapp.com/)
->> - [Figma](https://www.figma.com/)
-
-
-
-
-
-[def]: Baixa_Fidelidade.jpg

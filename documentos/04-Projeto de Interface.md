@@ -36,7 +36,7 @@ Destinada à criação de novas contas de usuário. Aqui, os usuários podem pre
 
 ### Tela - Inicial
 
-A Página inicial do site, oferece uma visão geral das finanças do usuário. No menu à esquerda, estão disponíveis a "Logomarca do Site" e  as opções de navegação, como "Início", "Despesas", "Receitas", "Cartão de Crédito" e "Meu Perfil". Na parte superior, é exibido o "Saldo atual", o "Total de Despesas", o "Total de Receitas" e as "Despesas com Cartão de Crédito".No cabeçalho a direita fica o "Nome de Usuário". Na parte inferior, são apresentados gráficos que mostram a distribuição dos gastos e receitas por categoria.
+A Página inicial do site, oferece uma visão geral das finanças do usuário. No menu à esquerda, estão disponíveis a "Logomarca do Site" e  as opções de navegação, como "Início", "Despesas", "Receitas", "Cartão de Crédito" e "Meu Perfil". Na parte superior, é exibido o "Mês de referêcia", o  "Saldo atual", o "Total de Despesas", o "Total de Receitas" e as "Despesas com Cartão de Crédito".No cabeçalho a direita fica o "Nome de Usuário". Na parte inferior, são apresentados gráficos que mostram a distribuição dos gastos e receitas por categoria.
 
 ![Alt text](img/Inicial.png)
 

@@ -19,7 +19,8 @@ Na parte inferior da página inicial, dois gráficos apresentam a distribuição
 
  ![Texto interativo imagem](img/Baixa_Fidelidade.jpg)
 
-A seguir, apresentaremos as telas do site por meio de protótipos de média fidelidade. Estes protótipos fornecerão uma visão mais detalhada e precisa da interface, permitindo uma melhor compreensão da usabilidade e da experiência do usuário.
+A seguir, apresentaremos as telas do site por meio de protótipos de média fidelidade. Este protótipo fornecerá uma visão mais detalhada e precisa da interface, atraves do link é possivel visualzar o protótipo  interativo feito no [Ambiente MarvalAPP](https://marvelapp.com/prototype/305739f6/screen/92814751)  permitindo uma melhor compreensão da usabilidade e da experiência do usuário.
+
 
 ### Tela - Login
 

@@ -6,7 +6,7 @@
 
 `2/2023`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
+O projeto a ser desenvolvido trata-se de um site online para controle de finanças pessoais, prpomovendo educação financeira e auxiliando a reduzir problemas relacionados a endividamento e descontrole financeiro. Além disso, a plataforma possui uma interface amigável, tornando simples o entendimento por parte de seus usuários de seus padrões de gastos, oportunidades de economia e estabelecimento de metas financeiras realistas.
 
 ## Integrantes
 

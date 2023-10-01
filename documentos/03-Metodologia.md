@@ -1,4 +1,3 @@
-
 # Metodologia
 
 Esta seção descreve a organização da equipe para a execução das tarefas do projeto e as ferramentas utilizadas para a manutenção dos códigos e demais artefatos.
@@ -51,11 +50,11 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 
 | AMBIENTE                            | PLATAFORMA                         | LINK DE ACESSO                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             | [Repositório](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t2-sitecontroledefinancas)                            |
-| Documentos do projeto               | GitHub                             |[Documentos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t2-sitecontroledefinancas/tree/main/documentos)                            |
-| Projeto de Interface                | CorewDraw/MarvelApp                | todo                            |
-| Gerenciamento do Projeto            | GitHub Projects                    | [Quadro Kanban](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/668)                            |
-| Hospedagem                          | Netlify                            |[Netlify](https://www.netlify.com/)                            |
+| Repositório de código fonte         | GitHub                             | [Repositório](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t2-sitecontroledefinancas)                     |
+| Documentos do projeto               | GitHub                             | [Documentos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t2-sitecontroledefinancas/tree/main/documentos) |
+| Projeto de Interface                | CorewDraw/MarvelApp                | [Fluxo Interativo no Marvel App] (https://marvelapp.com/prototype/305739f6/screen/92814751)                                       |
+| Gerenciamento do Projeto            | GitHub Projects                    | [Quadro Kanban](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/668)                                                      |
+| Hospedagem                          | Netlify                            | [Netlify](https://www.netlify.com/)                                                                                               |
 
 
 ### Estratégia de Organização de Codificação

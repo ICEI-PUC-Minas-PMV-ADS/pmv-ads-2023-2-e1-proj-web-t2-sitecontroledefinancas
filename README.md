@@ -37,7 +37,7 @@ O projeto a ser desenvolvido trata-se de um site online para controle de finanç
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
+* Insira o endereço eletrônico público de acesso ao conteúdo publicado.
 
 # Código-Fonte
 

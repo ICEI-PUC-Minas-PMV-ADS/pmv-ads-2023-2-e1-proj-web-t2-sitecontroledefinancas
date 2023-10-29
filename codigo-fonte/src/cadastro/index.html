@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sefirp - Cadastro</title>
+  <link rel="stylesheet" href="../css/cadastro.css">
+  <script src="../scripts/logged.js"></script>
+</head>
+
+<body>
+  <main>
+    <div id="left">
+      <img src="../icons/logomarca.svg" alt="Logomarca Sefirp">
+      <div class="hero">
+        <h1> <span class="title-bold">sua vida</span> financeira sem <span class="title-bold">complicação</span> e a um
+          clique de <span class="title-bold">distância.</span></h1>
+      </div>
+    </div>
+    <div id="right">
+      <form action="" id="form-cadastro">
+        <button id="google">Inscrever-se com Google</button>
+        <div class="form-row">
+          <span class="divisor"></span><span>ou</span><span class="divisor"></span>
+        </div>
+        <input type="text" name="name" id="name" placeholder="Nome">
+        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="password" name="password" id="password" placeholder="Senha">
+        <div class="form-row">
+          <span id="termos-cadastro">
+            <span class="black-text">Ao continuar, estou de acordo com os</span> <a href="">Termos de Uso</a><span
+              class="black-text"> e</span><br> <a href="">Aviso de Privacidade</a>
+          </span>
+        </div>
+        <button id="cadastrar">Concordar e cadastrar</button>
+        <span id="possui-conta">Já possui conta? <a href="/login">Entrar</a></span>
+        <span id="error"></span>
+      </form>
+    </div>
+  </main>
+  <script src="../scripts/cadastro.js"></script>
+</body>
+
+</html>

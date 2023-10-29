@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'GothamBold';
+  src: url('../fonts/Gotham-Font/GothamBold.ttf');
+}
+
+@font-face {
+  font-family: 'GothamLight';
+  src: url('../fonts/Gotham-Font/GothamLight.ttf');
+}
+
+body {
+  font-family: 'GothamLight';
+
+}
+
+main {
+  display: flex;
+}
+
+#left {
+  width: 60%;
+  height: 100vh;
+  background-color: #E9E9E9;
+  display: flex;
+  flex-direction: column;
+}
+
+#left img {
+  max-width: 20%;
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+h1 {
+  font-family: 'GothamLight';
+  color: #00AB8E;
+  max-width: 35vw;
+  font-size: 3rem;
+  margin-top: 40px;
+  margin-left: 25px;
+  text-align: left;
+}
+
+.title-bold {
+  font-family: 'GothamBold';
+  color: #514A42;
+}
+
+#right {
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../icons/foto.png');
+  background-position: center;
+  background-size: cover;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 40%;
+  padding: 40px 20px;
+  border-radius: 30px;
+  width: 35vw;
+  height: 80vh;
+  background-color: #ffffff;
+
+}
+
+input {
+  padding: 15px 10px 15px 30px;
+  margin-top: 20px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #efefef;
+}
+
+input:focus {
+  outline: #c6c6c6 solid 1px;
+}
+
+#name {
+  background-image: url('../icons/usuario.svg');
+  background-repeat: no-repeat;
+  background-position: 3% center;
+}
+
+#email {
+  background-image: url('../icons/email.svg');
+  background-repeat: no-repeat;
+  background-position: 3% center;
+}
+
+#password {
+  background-image: url('../icons/cadeado.svg');
+  background-repeat: no-repeat;
+  background-position: 3% center;
+}
+
+
+button {
+  background-color: #efefef;
+  padding: 15px 10px;
+  border-style: none;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  font-family: 'GothamLight';
+  cursor: pointer;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  color: #00AB8E;
+
+}
+
+.form-row a {
+  text-decoration: none;
+  color: #00AB8E;
+}
+
+#termos-cadastro {
+  text-align: center;
+  font-size: x-small;
+  margin: 10px auto;
+}
+
+#termos-cadastro {
+  color: inherit;
+}
+
+.black-text {
+  color: #514A42;
+}
+
+#cadastrar {
+  background-color: #00AB8E;
+  border: 1px solid #00AB8E;
+  font-family: 'GothamBold';
+  font-weight: bolder;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+#cadastrar:hover {
+  background-color: #ffffff;
+  color: #00AB8E;
+  border: 1px solid #00AB8E;
+}
+
+.divisor {
+  display: inline-block;
+  height: 2px;
+  width: 45%;
+  background-color: #d0d3d3;
+}
+
+#google {
+  border: 1px solid #efefef;
+  background-image: url('../icons/gmail.svg');
+  background-repeat: no-repeat;
+  background-position: 3% center;
+
+}
+
+#google:hover {
+  border: 1px solid #c6c6c6;
+}
+
+#possui-conta {
+  color: #514A42;
+  font-size: small;
+  margin: 0 auto;
+}
+
+#possui-conta a {
+  color: #00AB8E;
+  font-family: 'GothamBold';
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -70,3 +70,42 @@ Ao acessar a aplicação sem estar logado, a mesma irá redirecionar para a pág
 #### Responsável
 
 Elismar Ramos
+
+--
+
+### Cadastro de Receitas
+
+![Tela de cadastro de receitas](./img/funcionalidade-cadastro-receitas.png)
+
+
+#### Requisito atendido
+
+RF-03: O site deve permitir o cadastro de novas receitas
+
+
+#### Artefatos da funcionalidade
+
+<ul>
+  <li>receitas/index.html</li>
+  <li>receitas/nova/index.html</li>
+  <li>receitas.css</li>
+  <li>novareceita.css</li>
+  <li>receitas.js</li>
+  <li>novareceita.js</li>
+</ul>
+
+
+#### Estrutura de Dados
+
+Objetos e arrays para cadastrar e recuperar as informações das receitas cadastradas associadas ao usuário logado, a partir das informações armazenadas no localStorage.
+
+#### Instruções de acesso
+
+Após fazer login na aplicação,clicar no menu lateral no item Receitas e em seguida no card escrito NOVA RECEITA. Preencher o formulário com as informações solicitadas e clicar no botão de confirmação.
+
+#### Responsável
+
+Felipe Gomes
+
+--
+

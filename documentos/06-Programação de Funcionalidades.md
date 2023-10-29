@@ -92,6 +92,7 @@ RF-03: O site deve permitir o cadastro de novas receitas
   <li>novareceita.css</li>
   <li>receitas.js</li>
   <li>novareceita.js</li>
+  <li>logged.js</li>
 </ul>
 
 
@@ -129,6 +130,7 @@ RF-04: O site deve permitir o cadastro de novas despesas
   <li>novareceita.css</li>
   <li>despesas.js</li>
   <li>novareceita.js</li>
+  <li>logged.js</li>
 </ul>
 
 
@@ -145,3 +147,37 @@ Após fazer login na aplicação,clicar no menu lateral no item Despesas e em se
 Simon Cauã
 
 --
+
+### Página inicial do usuário logado
+
+![página inicial](./img/funcionalidade-relatorio-geral.png)
+
+
+#### Requisito atendido
+
+RF-05: O site deve permitir a visualização completa de receitas e despesas na página inicial do usuário logado
+
+
+#### Artefatos da funcionalidade
+
+<ul>
+  <li>index.html</li>
+  <li>home.css</li>
+  <li>home.js</li>
+  <li>logged.js</li>
+  <li>donut.min.js</li>
+
+</ul>
+
+
+#### Estrutura de Dados
+
+Objetos e arrays para recuperar as informações das despesas e receitas cadastradas associadas ao usuário logado, a partir das informações armazenadas no localStorage. Essas mesmas estruturas são utilizadas para a renderização dos gráficos de receitas e despesas, além dos cálculos de saldo e totais.
+
+#### Instruções de acesso
+
+Após fazer login na aplicação, o usuário é automaticamente redirecionado para a página correspondente a essa funcionalidade.
+
+#### Responsável
+
+Pedro Henrique

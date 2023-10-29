@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sefirp - Login</title>
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+  <main>
+    <div id="left">
+      <img src="../icons/logomarca.svg" alt="Logomarca Sefirp">
+      <div class="hero">
+        <h1> <span class="title-bold">sua vida</span> financeira sem <span class="title-bold">complicação</span> e a um
+          clique de <span class="title-bold">distância.</span></h1>
+      </div>
+    </div>
+    <div id="right">
+      <form action="">
+        <a id="google">Fazer login com Google</a>
+        <div class="form-row">
+          <span class="divisor"></span><span>ou</span><span class="divisor"></span>
+        </div>
+        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="password" name="password" id="password" placeholder="Senha">
+        <div class="form-row">
+          <span id="remember-pass">
+            <input type="checkbox" name="lembrar" id="lembrar">
+            <label for="lembrar">Lembrar senha</label>
+          </span>
+          <a href="#">Esqueci minha senha</a>
+        </div>
+        <button id="entrar">Entrar</button>
+        <a id="cadastrar" href="/cadastro">Cadastrar</a>
+        <span id="error"></span>
+      </form>
+    </div>
+  </main>
+  <script src="../scripts/login.js"></script>
+</body>
+
+</html>

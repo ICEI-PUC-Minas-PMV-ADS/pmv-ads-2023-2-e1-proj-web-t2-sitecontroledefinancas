@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/despesas.css">
+  <script src="../scripts/logged.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="menu">
+      <header>
+        <img src="../icons/menu/icone.svg" alt="Icone Sefirp">
+        <nav>
+          <ul id="nav-list">
+            <li class="nav-item"><a class="nav-item-link" href="/"> <img src="../icons/menu/home.svg" alt="">Início</a>
+            </li>
+            <li class="nav-item"><a class="nav-item-link" href="/receitas"><img src="../icons/menu/incomings.svg"
+                  alt="">Receitas</a>
+            </li>
+            <li class="nav-item"><a class="nav-item-link" href="/despesas"><img src="../icons/menu/expenses.svg" alt="">
+                Despesas</a></li>
+            <li class="nav-item"><a class="nav-item-link" href=""> <img src="../icons/menu/card.svg" alt=""> Cartão</a>
+            </li>
+            <li class="nav-item"><a class="nav-item-link" href=""> <img src="../icons/menu/profile.svg" alt=""> Meu
+                Perfil</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="top"></div>
+    <div class="expenses">
+      <a href="/despesas/nova" class="box">
+        NOVA DESPESA
+      </a>
+      <div class="box">
+        <p>Despesas pagas</p>
+        <p id="pagas"></p>
+      </div>
+      <div class="box">
+        <p>Despesas pendentes</p>
+        <p id="pendentes"></p>
+      </div>
+      <div class="box">
+        <p>Total de despesas</p>
+        <p id="total"></p>
+      </div>
+    </div>
+    <div class="table-outter">
+      <div class="table-inner">
+        <table id="tabela-despesas">
+          <tr>
+            <th>Data</th>
+            <th>Descrição</th>
+            <th>categoria</th>
+            <th>Valor</th>
+            <th>Situação</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="../scripts/despesas.js"></script>
+</body>
+
+</html>

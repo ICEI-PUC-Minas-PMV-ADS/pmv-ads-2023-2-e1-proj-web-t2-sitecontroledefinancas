@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sefirp - Página Inicial</title>
+  <link rel="stylesheet" href="./css/home.css">
+  <script src="/scripts/logged.js"></script>
+  <script src="./scripts/donut.min.js"></script>
+</head>
+
+<body>
+  <div class="menu">
+    <header>
+      <img src="./icons/menu/icone.svg" alt="Icone Sefirp">
+      <nav>
+        <ul id="nav-list">
+          <li class="nav-item"><a class="nav-item-link" href="/"> <img src="./icons/menu/home.svg" alt="">Início</a>
+          </li>
+          <li class="nav-item"><a class="nav-item-link" href="/receitas"><img src="./icons/menu/incomings.svg"
+                alt="">Receitas</a>
+          </li>
+          <li class="nav-item"><a class="nav-item-link" href="/despesas"><img src="./icons/menu/expenses.svg" alt="">
+              Despesas</a></li>
+          <li class="nav-item"><a class="nav-item-link" href=""> <img src="./icons/menu/card.svg" alt="">Cartão</a>
+          </li>
+          <li class="nav-item"><a class="nav-item-link" href=""> <img src="./icons/menu/profile.svg" alt=""> Meu
+              Perfil</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <main>
+    <div id="form-container">
+      <form action="">
+        <select name="" id="">
+          <option value="Setembro">Setembro</option>
+        </select>
+      </form>
+    </div>
+    <div id="values">
+      <div class="mini-box">
+        <div class="esquerda">
+          <h3>Saldo Atual</h3>
+          <p id="saldo"></p>
+        </div>
+        <div class="direita"><img src="./icons/screen/saldo.svg" alt=""></div>
+      </div>
+      <div class="mini-box">
+        <div class="esquerda">
+          <h3>Receitas</h3>
+          <p id="receitas"></p>
+        </div>
+        <div class="direita"><img src="./icons/screen/receitas.svg" alt=""> </div>
+      </div>
+      <div class="mini-box">
+        <div class="esquerda">
+          <h3>Despesas</h3>
+          <p id="despesas"></p>
+        </div>
+        <div class="direita"><img src="./icons/screen/despesas.svg" alt=""> </div>
+      </div>
+      <div class="mini-box">
+        <div class="esquerda">
+          <h3>Cartão de Crédito</h3>
+          <p id="cartão"></p>
+        </div>
+        <div class="direita"><img src="./icons/screen/cartao.svg" alt=""> </div>
+      </div>
+    </div>
+    <div id="charts">
+      <div class="chart-box">
+        <h2>Despesas por categoria</h2>
+        <div class="chart-flex">
+          <div id="expenses-chart" class="chart-container"></div>
+          <div id="expenses-legend-container" class="chart-legend-container">
+            <ul id="expenses-legend-list"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="chart-box">
+        <h2>Receitas por categoria</h2>
+        <div class="chart-flex">
+          <div id="incomings-chart" class="chart-container"></div>
+          <div id="incomings-legend-container" class="chart-legend-container">
+            <ul id="incomings-legend-list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./scripts/home.js"></script>
+</body>
+
+</html>

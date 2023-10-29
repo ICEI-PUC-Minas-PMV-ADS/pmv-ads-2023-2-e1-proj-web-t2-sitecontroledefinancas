@@ -1,12 +1,31 @@
 # Template padrão da Aplicação
 
-Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+O layout padrão da aplicação foi desenvolvido utilizando linguagem de marcação HTML, folhas de estilo CSS e linguagem de programação Javascript para renderização dos gráficos, através da biblioteca [Donut JS](https://github.com/finom/donutjs).
 
-[Apresente a estrutura padrão da sua aplicação.]
+O template padrão consiste em um menu de navegação lateral, cards, tabelas e gráficos dispostos no restante da página.
+O codigo fonte da aplicação está disponivel [nesse link](/codigo-fonte/src).
+Os icones utilizados na aplicação estão disponiveis [aqui](/codigo-fonte/src/icons/).
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+<ul>
+<li>Cores: #00AB8E, #514A42, #C6C6C6, #D0D3D3. #EFEFEF, #FFFFFF;</li>
+<li>Font-family: Gotham, variações Light e Bold.</li>
+<li>Recursos de estilo: Flexbox e Grid. </li>
+</ul>
+
+
+Abaixo, exemplos de páginas que seguem o template padrão:
+
+<h3><b>Página Inicial</b></h3>
+<p>Apresenta uma visão geral das finanças do usuário logado no sistema.</p>
+<figure>
+  <img src="./img/template-home.png">
+  <figcaption> Figura 1 - Página Inicial
+</figure>
+
+<h3><b>Página de Receitas</b></h3>
+<p>Apresenta uma visão das receitas do usuário logado no sistema.</p>
+<figure>
+  <img src="./img/template-receitas.png">
+  <figcaption> Figura 2 - Página de Receitas
+</figure>
+

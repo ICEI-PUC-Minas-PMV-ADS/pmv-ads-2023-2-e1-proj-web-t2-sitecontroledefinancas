@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/novareceita.css">
+  <script src="../../scripts/logged.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="menu">
+      <header>
+        <img src="../../icons/menu/icone.svg" alt="Icone Sefirp">
+        <nav>
+          <ul id="nav-list">
+            <li class="nav-item"><a class="nav-item-link" href="/"> <img src="../../icons/menu/home.svg"
+                  alt="">Início</a>
+            </li>
+            <li class="nav-item"><a class="nav-item-link" href="/receitas"><img src="../../icons/menu/incomings.svg"
+                  alt="">Receitas</a>
+            </li>
+            <li class="nav-item"><a class="nav-item-link" href="/despesas"><img src="../../icons/menu/expenses.svg"
+                  alt="">
+                Despesas</a></li>
+            <li class="nav-item"><a class="nav-item-link" href=""> <img src="../../icons/menu/card.svg" alt="">
+                Cartão</a>
+            </li>
+            <li class="nav-item"><a class="nav-item-link" href=""> <img src="../../icons/menu/profile.svg" alt=""> Meu
+                Perfil</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="top"></div>
+    <div class="incomings">
+      <a href="/receitas" class="box">
+        RECEITAS
+      </a>
+      <div class="box">
+        <p>receitas recebidas</p>
+        <p id="recebidas"></p>
+      </div>
+      <div class="box">
+        <p>receitas pendentes</p>
+        <p id="pendentes"></p>
+      </div>
+      <div class="box">
+        <p>Total de receitas</p>
+        <p id="total"></p>
+      </div>
+    </div>
+    <div class="form-outter">
+      <div class="form-inner">
+        <form id="form-receita" action="">
+          <p>NOVA receita</p>
+          <input type="number" name="valor" id="valor" placeholder="R$ 0,00" required>
+          <input type="date" name="data" id="data" required>
+          <input type="text" name="descrição" id="descrição" placeholder="Descrição" required>
+          <input type="text" name="categoria" id="categoria" placeholder="Categoria" required>
+          <div>
+            <input type="checkbox" name="recebida" id="recebida" placeholder="Situação">
+            <label for="recebida">recebida?</label>
+          </div>
+          <button id="cadastrar">Cadastrar</button>
+          <p id="error"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="../../scripts/novareceita.js"></script>
+</body>
+
+</html>

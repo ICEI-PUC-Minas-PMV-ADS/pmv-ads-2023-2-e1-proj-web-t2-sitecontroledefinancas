@@ -2,43 +2,37 @@
 
 Implementação da aplicação descritas por meio dos requisitos codificados. 
 
-[Utilize a estrutura abaixo para cada funcionalidade entregue na etapa]
 
-### Título da funcionalidade
+### Cadastro de usuários
 
-[Adicione imagem da funcionalidade/tela]
+![Tela de cadastro de usuários](./img/funcionalidade-cadastro.png)
 
 
 #### Requisito atendido
 
-[RF-X: adicione a descrição do requisito atendido]
+[RF-001: O site deve permitir que o usuário faça o cadastro de sua conta na plataforma]
 
 
 #### Artefatos da funcionalidade
 
-[Adicione os nomes dos arquivos relacionados ao desenvolvimento da funcionalidade]
+<ul>
+  <li>cadastro/index.html</li>
+  <li>cadastro.css</li>
+  <li>cadastro.js</li>
+</ul>
 
 
 #### Estrutura de Dados
 
-[Caso exista estrutura de dados, adicione aqui]
-
+Objetos e arrays para salvar as informações dos usuários cadastrados no localStorage.
 
 #### Instruções de acesso
 
-[Adicione as orientações de acesso à funcionalidade]
+Ao acessar a aplicação sem estar logado, a mesma irá redirecionar para a página de login. Pode-se clicar no botção com o texto CADASTRAR para ser redirecionado para a tela de cadastro. 
+
+Para realizar o cadastro, deve-se preencher o nome, e-mail e senha. O nome precisa ter no minimo 3 caracteres, o e-mail deve ser um e-mail válido, e a senha precisa ter no mínimo 6 caracteres.
 
 
 #### Responsável
 
-[Adicione nome do responsável pelo desenvolvimento da funcionalidade]
-
-
-
-
-> **Links Úteis**:
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
-
+Rafael Maltez

@@ -10,7 +10,7 @@ Implementação da aplicação descritas por meio dos requisitos codificados.
 
 #### Requisito atendido
 
-[RF-001: O site deve permitir que o usuário faça o cadastro de sua conta na plataforma]
+RF-01: O site deve permitir que o usuário faça o cadastro de sua conta na plataforma
 
 
 #### Artefatos da funcionalidade
@@ -36,3 +36,37 @@ Para realizar o cadastro, deve-se preencher o nome, e-mail e senha. O nome preci
 #### Responsável
 
 Rafael Maltez
+
+--
+
+
+### Login de usuários
+
+![Tela de login de usuários](./img/funcionalidade-login.png)
+
+
+#### Requisito atendido
+
+RF-02: O site deve permitir que o usuário faça login, tendo acesso apenas às suas próprias finanças
+
+
+#### Artefatos da funcionalidade
+
+<ul>
+  <li>login/index.html</li>
+  <li>login.css</li>
+  <li>login.js</li>
+</ul>
+
+
+#### Estrutura de Dados
+
+Objetos e arrays para recuperar as informações dos usuários cadastrados no localStorage.
+
+#### Instruções de acesso
+
+Ao acessar a aplicação sem estar logado, a mesma irá redirecionar para a página de login. Deve-se utilizar um e-mail e senha previamente cadastrados para realizar o acesso.
+
+#### Responsável
+
+Elismar Ramos

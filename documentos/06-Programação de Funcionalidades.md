@@ -109,3 +109,39 @@ Felipe Gomes
 
 --
 
+
+### Cadastro de Despesas
+
+![Tela de cadastro de despesas](./img/funcionalidade-cadastro-despesas.png)
+
+
+#### Requisito atendido
+
+RF-04: O site deve permitir o cadastro de novas despesas
+
+
+#### Artefatos da funcionalidade
+
+<ul>
+  <li>despesas/index.html</li>
+  <li>despesas/nova/index.html</li>
+  <li>despesas.css</li>
+  <li>novareceita.css</li>
+  <li>despesas.js</li>
+  <li>novareceita.js</li>
+</ul>
+
+
+#### Estrutura de Dados
+
+Objetos e arrays para cadastrar e recuperar as informações das despesas cadastradas associadas ao usuário logado, a partir das informações armazenadas no localStorage.
+
+#### Instruções de acesso
+
+Após fazer login na aplicação,clicar no menu lateral no item Despesas e em seguida no card escrito NOVA DESPESA. Preencher o formulário com as informações solicitadas e clicar no botão de confirmação.
+
+#### Responsável
+
+Simon Cauã
+
+--

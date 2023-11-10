@@ -1,11 +1,12 @@
 const expenseCategories = {
-  diversão: 'blue',
-  moradia: 'red',
-  pagamentos: 'yellow',
-  educação: 'orange',
-  supermercado: 'gray',
-  saúde: 'black',
-  roupas: 'cyan'
+  Lazer: 'blue',
+  Moradia: 'red',
+  Pagamentos: 'yellow',
+  Educação: 'orange',
+  Alimentação: 'gray',
+  Saúde: 'black',
+  Transaporte: '',
+  Vestuário: 'cyan'
 }
 
 

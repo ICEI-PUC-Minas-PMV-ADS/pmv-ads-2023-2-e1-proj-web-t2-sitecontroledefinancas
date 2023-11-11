@@ -1,26 +1,34 @@
-const expenseCategories = {
+const localStorageExpenses = JSON.parse(localStorage.getItem('expenseCategories'));
+
+const defaultExpenses = {
   Lazer: 'blue',
   Moradia: 'red',
   Pagamentos: 'yellow',
   Educação: 'orange',
   Alimentação: 'gray',
   Saúde: 'black',
-  Transaporte: '',
+  Transaporte: 'lightblue',
   Vestuário: 'cyan'
 }
+if (!localStorageExpenses) {
+  localStorage.setItem('expenseCategories', JSON.stringify(defaultExpenses))
+}
+const expenseCategories = localStorageExpenses || defaultExpenses;
 
 
-function randomColor() {
-  const colorList = ['green', '	lightseagreen', 'lightgreen', 'fuchsia', 'darkred', 'darkcyan', 	'mediumslateblue'];
-  const index = Math.floor(Math.random() * 7);
-  return colorList[index];
+const localStorageIncomings = JSON.parse(localStorage.getItem('incomingsCategories'));
+const defaultIncomings = {
+  Salário: 'blue',
+  Investimentos: 'gray',
+  Freelancer: 'orange',
+  "Bolsa de estudos": 'yellow',
+  Mesada: "lightblue"
+}
+if (!localStorageIncomings) {
+  localStorage.setItem('incomingsCategories', JSON.stringify(defaultIncomings));
 }
 
-
-const incomingsCategories = {
-  salario: 'blue',
-  bolsa: 'gray'
-}
+const incomingsCategories = localStorageIncomings || defaultIncomings;
 
 const users = JSON.parse(localStorage.getItem('users'));
 const expenses = users[loggedUser.email].expenses;
@@ -47,7 +55,7 @@ const expensesForChart = expenses.map((expense) => (
   {...expense,
     value: parseFloat(expense.value),
     name: expense.description,
-    color: expenseCategories[expense.category] || randomColor()
+    color: expenseCategories[expense.category]
   })
 )
 
@@ -55,7 +63,7 @@ const incomingsForChart = incomings.map((incoming) => (
   {...incoming,
     value: parseFloat(incoming.value),
     name: incoming.description,
-    color: incomingsCategories[incoming.category] || randomColor()
+    color: incomingsCategories[incoming.category]
   })
 )
 

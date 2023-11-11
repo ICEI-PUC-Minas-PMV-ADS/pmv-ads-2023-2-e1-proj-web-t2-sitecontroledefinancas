@@ -60,7 +60,9 @@
           <input type="number" name="valor" id="valor" placeholder="R$ 0,00" required>
           <input type="date" name="data" id="data" required>
           <input type="text" name="descrição" id="descrição" placeholder="Descrição" required>
-          <input type="text" name="categoria" id="categoria" placeholder="Categoria" required>
+          <select name="categoria" id="categoria">
+            <option value="" disabled selected>Selecione a categoria</option>
+          </select>
           <div>
             <input type="checkbox" name="paga" id="paga" placeholder="Situação">
             <label for="paga">Paga?</label>

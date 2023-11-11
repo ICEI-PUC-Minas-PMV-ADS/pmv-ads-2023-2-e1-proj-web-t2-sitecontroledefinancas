@@ -56,3 +56,27 @@ function renderizarValores() {
 }
 
 renderizarValores()
+
+function createOptions() {
+  const select = document.getElementById("categoria");
+  const expenseCategories = JSON.parse(localStorage.getItem("expenseCategories"));
+  console.log("Categorias de despesa:", expenseCategories);
+  Object.keys(expenseCategories).forEach((categorie) => {
+    const option = document.createElement('option');
+    option.value = categorie;
+    option.innerText = categorie;
+    select.appendChild(option)
+  })
+}
+
+createOptions()
+
+// Outra forma de fazer a mesma coisa
+// function createOptions() {
+//   const select = document.getElementById("categoria")
+//   const expenseCategories = JSON.parse(localStorage.getItem("expenseCategories"));
+//   Object.keys(expenseCategories).forEach((categorie) => {
+//     const option = `<option value=${categorie}>${categorie}</option>`
+//     select.innerHTML += option
+//   })
+// }

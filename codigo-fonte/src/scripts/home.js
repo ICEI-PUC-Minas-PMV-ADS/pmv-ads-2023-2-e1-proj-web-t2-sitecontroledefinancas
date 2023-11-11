@@ -1,25 +1,34 @@
-const expenseCategories = {
-  diversão: 'blue',
-  moradia: 'red',
-  pagamentos: 'yellow',
-  educação: 'orange',
-  supermercado: 'gray',
-  saúde: 'black',
-  roupas: 'cyan'
+const localStorageExpenses = JSON.parse(localStorage.getItem('expenseCategories'));
+
+const defaultExpenses = {
+  Lazer: 'blue',
+  Moradia: 'red',
+  Pagamentos: 'yellow',
+  Educação: 'orange',
+  Alimentação: 'gray',
+  Saúde: 'black',
+  Transaporte: 'lightblue',
+  Vestuário: 'cyan'
+}
+if (!localStorageExpenses) {
+  localStorage.setItem('expenseCategories', JSON.stringify(defaultExpenses))
+}
+const expenseCategories = localStorageExpenses || defaultExpenses;
+
+
+const localStorageIncomings = JSON.parse(localStorage.getItem('incomingsCategories'));
+const defaultIncomings = {
+  Salário: 'blue',
+  Investimentos: 'gray',
+  Freelancer: 'orange',
+  "Bolsa de estudos": 'yellow',
+  Mesada: "lightblue"
+}
+if (!localStorageIncomings) {
+  localStorage.setItem('incomingsCategories', JSON.stringify(defaultIncomings));
 }
 
-
-function randomColor() {
-  const colorList = ['green', '	lightseagreen', 'lightgreen', 'fuchsia', 'darkred', 'darkcyan', 	'mediumslateblue'];
-  const index = Math.floor(Math.random() * 7);
-  return colorList[index];
-}
-
-
-const incomingsCategories = {
-  salario: 'blue',
-  bolsa: 'gray'
-}
+const incomingsCategories = localStorageIncomings || defaultIncomings;
 
 const users = JSON.parse(localStorage.getItem('users'));
 const expenses = users[loggedUser.email].expenses;
@@ -46,7 +55,7 @@ const expensesForChart = expenses.map((expense) => (
   {...expense,
     value: parseFloat(expense.value),
     name: expense.description,
-    color: expenseCategories[expense.category] || randomColor()
+    color: expenseCategories[expense.category]
   })
 )
 
@@ -54,7 +63,7 @@ const incomingsForChart = incomings.map((incoming) => (
   {...incoming,
     value: parseFloat(incoming.value),
     name: incoming.description,
-    color: incomingsCategories[incoming.category] || randomColor()
+    color: incomingsCategories[incoming.category]
   })
 )
 

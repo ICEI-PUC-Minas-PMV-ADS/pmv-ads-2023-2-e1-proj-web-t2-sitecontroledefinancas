@@ -1,3 +1,21 @@
+/*
+TODO:
+
+Acrecentar select de ano no formulario;
+capturar o envio do formulario em vez da mundaça do select;
+permitir mostrar todas as despesas;
+
+filtrar por ano;
+filtrar por mes/ano;
+
+combinar os filtros: mes/ano/categoria
+
+
+Mostrar dados do usuário logado no cabeçalho;
+
+Implementar logout
+
+*/
 const localStorageExpenses = JSON.parse(localStorage.getItem('expenseCategories'));
 
 const defaultExpenses = {
@@ -30,63 +48,101 @@ if (!localStorageIncomings) {
 
 const incomingsCategories = localStorageIncomings || defaultIncomings;
 
+
+// Capturtando informações de despesas e receitas do local storage
 const users = JSON.parse(localStorage.getItem('users'));
 const expenses = users[loggedUser.email].expenses;
 const incomings = users[loggedUser.email].incomings;
 const cardExpenses = users[loggedUser.email].cardExpenses;
 const formatter = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'});
 
-const expensesTotal = expenses.reduce((acc, expense) => parseFloat(expense.value) + acc, 0);
-const incomingsTotal = incomings.reduce((acc, incoming) => parseFloat(incoming.value) + acc, 0);
-const cardExpensesTotal = cardExpenses.reduce((acc, cardExpense) => cardExpense.value + acc, 0);
-const totalBalance  = incomingsTotal - (expensesTotal + cardExpensesTotal);
+const meses = document.getElementById("meses");
 
-const receitas = document.getElementById('receitas');
-const despesas = document.getElementById('despesas');
-const cartão = document.getElementById('cartão');
-const saldo = document.getElementById('saldo');
-
-receitas.innerText = formatter.format(incomingsTotal);
-despesas.innerText = formatter.format(expensesTotal);
-cartão.innerText = formatter.format(cardExpensesTotal);
-saldo.innerText = formatter.format(totalBalance);
-
-const expensesForChart = expenses.map((expense) => (
-  {...expense,
-    value: parseFloat(expense.value),
-    name: expense.description,
-    color: expenseCategories[expense.category]
+// Adiciona logica de filtrar despesas por mês
+meses.addEventListener('change', (e) => {
+  const mesParaFiltrar = e.target.value;
+  const filteredExpenses = expenses.filter((despesa) => {
+    const mesdaDespesa = despesa.date.split("-")[1];
+    return  parseInt(mesdaDespesa) === parseInt(mesParaFiltrar)
   })
-)
-
-const incomingsForChart = incomings.map((incoming) => (
-  {...incoming,
-    value: parseFloat(incoming.value),
-    name: incoming.description,
-    color: incomingsCategories[incoming.category]
-  })
-)
+  renderCards(filteredExpenses)
+  renderCharts(filteredExpenses)
+})
 
 
-const expenseChart = donut({
-  el: document.getElementById('expenses-chart'),
-  size: 200,
-  weight: 30,
-  data: expensesForChart.length > 0 ? expensesForChart : [{value: 100}],
-  colors: expensesForChart.length > 0 ? expensesForChart.map((expense) => expense.color) : ['yellow']
-});
+function renderCards(expenses) {
+  // renderização dos cards
+  const expensesTotal = expenses.reduce((acc, expense) => parseFloat(expense.value) + acc, 0);
+  const incomingsTotal = incomings.reduce((acc, incoming) => parseFloat(incoming.value) + acc, 0);
+  const cardExpensesTotal = cardExpenses.reduce((acc, cardExpense) => cardExpense.value + acc, 0);
+  const totalBalance  = incomingsTotal - (expensesTotal + cardExpensesTotal);
 
-const incomingsChart = donut({
-  el: document.getElementById('incomings-chart'),
-  size: 200,
-  weight: 30,
-  data: incomingsForChart.length > 0 ? [...incomingsForChart] : [{value: 100}],
-  colors: incomingsForChart.length > 0 ? incomingsForChart.map((incoming) => incoming.color) : ['yellow']
-});
+  const receitas = document.getElementById('receitas');
+  const despesas = document.getElementById('despesas');
+  const cartão = document.getElementById('cartão');
+  const saldo = document.getElementById('saldo');
 
-const legendList = document.getElementById("expenses-legend-list");
-const incomingLegendList = document.getElementById("incomings-legend-list");
+  receitas.innerText = formatter.format(incomingsTotal);
+  despesas.innerText = formatter.format(expensesTotal);
+  cartão.innerText = formatter.format(cardExpensesTotal);
+  saldo.innerText = formatter.format(totalBalance);
+}
+renderCards(expenses)
 
+
+function renderCharts(expenses) {
+  console.log("Despesas:", expenses)
+  // Despesas formatadas para o gráfico
+  const expensesForChart = expenses.map((expense) => (
+    {...expense,
+      value: parseFloat(expense.value),
+      name: expense.description,
+      color: expenseCategories[expense.category]
+    })
+  )
+
+  // Receitas formatadas para o gráfico
+  const incomingsForChart = incomings.map((incoming) => (
+    {...incoming,
+      value: parseFloat(incoming.value),
+      name: incoming.description,
+      color: incomingsCategories[incoming.category]
+    })
+  )
+  // Grafico de despesas
+  document.getElementById('expenses-chart').innerHTML = ""
+  const expenseChart = donut({
+    el: document.getElementById('expenses-chart'),
+    size: 200,
+    weight: 30,
+    data: expensesForChart.length > 0 ? expensesForChart : [{value: 100}],
+    colors: expensesForChart.length > 0 ? expensesForChart.map((expense) => expense.color) : ['yellow']
+  });
+
+  // Grafico de Receitas
+  document.getElementById('incomings-chart').innerHTML = ""
+  const incomingsChart = donut({
+    el: document.getElementById('incomings-chart'),
+    size: 200,
+    weight: 30,
+    data: incomingsForChart.length > 0 ? [...incomingsForChart] : [{value: 100}],
+    colors: incomingsForChart.length > 0 ? incomingsForChart.map((incoming) => incoming.color) : ['yellow']
+  });
+  const legendList = document.getElementById("expenses-legend-list");
+  legendList.innerHTML = ""
+  const incomingLegendList = document.getElementById("incomings-legend-list");
+  incomingLegendList.innerHTML = ""
+  createLegend(expensesForChart, legendList);
+  createLegend(incomingsForChart, incomingLegendList);
+}
+
+renderCharts(expenses)
+
+
+
+
+
+// Cria as legendas
 function createLegend(lista, elemento) {
   if (lista.length === 0) {
     const li = document.createElement('li');
@@ -115,9 +171,17 @@ function createLegend(lista, elemento) {
   });
 }
 
-createLegend(expensesForChart, legendList);
-createLegend(incomingsForChart, incomingLegendList);
 
 
+// Logout
+
+const linkDeLogout = document.getElementById("logout");
+
+linkDeLogout.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.removeItem("loggedUser");
+  console.log(window)
+  window.location.href = "/login"
+})
 
 

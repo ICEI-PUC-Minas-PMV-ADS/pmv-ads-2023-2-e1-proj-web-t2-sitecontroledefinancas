@@ -34,7 +34,7 @@
   </div>
   <main>
     <div id="form-container">
-      <form action="">
+      <form action="" id="filter-form">
         <select name="" id="meses">
           <option value="" disabled selected>Selecione o mês</option>
           <option value="">Todos os meses</option>
@@ -51,6 +51,9 @@
           <option value="11">Novembro</option>
           <option value="12">Dezembro</option>
         </select>
+        <input type="number" min="2000" max="2030" step="1" value="" id="ano" placeholder="Ano" />
+        <input type="submit" value="Filtrar">
+        <button type="reset">Limpar Filtros</button>
       </form>
     </div>
     <div id="values">

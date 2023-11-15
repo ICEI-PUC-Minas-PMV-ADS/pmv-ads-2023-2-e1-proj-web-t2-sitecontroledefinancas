@@ -2,8 +2,8 @@
 TODO:
 
 Acrecentar select de ano no formulario;
-capturar o envio do formulario em vez da mundaça do select;
-permitir mostrar todas as despesas;
+capturar o envio do formulario em vez da mudaça do select;
+OK permitir mostrar todas as despesas;
 
 filtrar por ano;
 filtrar por mes/ano;
@@ -56,27 +56,42 @@ const incomings = users[loggedUser.email].incomings;
 const cardExpenses = users[loggedUser.email].cardExpenses;
 const formatter = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'});
 
-const meses = document.getElementById("meses");
+const formularioDeFiltro = document.getElementById("filter-form");
 
 // Adiciona logica de filtrar despesas por mês
-meses.addEventListener('change', (e) => {
-  const mesParaFiltrar = e.target.value;
-  if (!mesParaFiltrar) {
-    renderCards(expenses, incomings)
-    renderCharts(expenses, incomings)
-    return;
+formularioDeFiltro.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const mesParaFiltrar = document.getElementById("meses").value;
+  const anoParaFiltrar = document.getElementById("ano").value;
+  let filteredExpenses = [...expenses]
+  let filteredIncomings = [...incomings]
+  if(anoParaFiltrar) {
+    filteredExpenses = expenses.filter((despesa) => {
+      const anodaDespesa = despesa.date.split("-")[0];
+      return  parseInt(anodaDespesa) === parseInt(anoParaFiltrar)
+    })
+    filteredIncomings = incomings.filter((entrada) => {
+      const anodaEntrada = entrada.date.split("-")[0];
+      return  parseInt(anodaEntrada) === parseInt(anoParaFiltrar)
+    })
   }
-  const filteredExpenses = expenses.filter((despesa) => {
-    const mesdaDespesa = despesa.date.split("-")[1];
-    return  parseInt(mesdaDespesa) === parseInt(mesParaFiltrar)
-  })
-  const filteredIncomings = incomings.filter((entrada) => {
-    const mesdaEntrada = entrada.date.split("-")[1];
-    return  parseInt(mesdaEntrada) === parseInt(mesParaFiltrar)
-  })
-  console.log("Receitas filtradas:", filteredIncomings)
+  if (mesParaFiltrar) {
+    filteredExpenses = expenses.filter((despesa) => {
+      const mesdaDespesa = despesa.date.split("-")[1];
+      return  parseInt(mesdaDespesa) === parseInt(mesParaFiltrar)
+    })
+    filteredIncomings = incomings.filter((entrada) => {
+      const mesdaEntrada = entrada.date.split("-")[1];
+      return  parseInt(mesdaEntrada) === parseInt(mesParaFiltrar)
+    })
+  }
   renderCards(filteredExpenses, filteredIncomings)
   renderCharts(filteredExpenses, filteredIncomings)
+})
+
+formularioDeFiltro.addEventListener("reset", (e) => {
+  renderCards(expenses, incomings);
+  renderCharts(expenses, incomings)
 })
 
 

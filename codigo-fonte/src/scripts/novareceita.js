@@ -8,7 +8,12 @@ function cadastrar(e) {
   const descrição = document.getElementById('descrição');
   const categoria = document.getElementById('categoria');
   const recebida = document.getElementById('recebida');
+  const novaCategoria = document.getElementById("nova-categoria")
   if(!valor.value || ! data.value || !descrição.value || !categoria.value) {
+    showErrorMessage('Preencha todos os campos');
+    return;
+  }
+  if (novaCategoria && !novaCategoria.value) {
     showErrorMessage('Preencha todos os campos');
     return;
   }
@@ -17,16 +22,29 @@ function cadastrar(e) {
     value: valor.value,
     date: data.value,
     description: descrição.value,
-    category: categoria.value,
+    category: categoria.value === "outra" ? novaCategoria.value : categoria.value,
     received: recebida.checked
   });
   localStorage.setItem('users', JSON.stringify(users));
+  if (novaCategoria) {
+    cadastrarCategoria(novaCategoria.value);
+    createOptions()
+  }
   valor.value = ''
   data.value = ''
   descrição.value = ''
   categoria.value = ''
-  recebida.value = ''
+  novaCategoria.remove();
+  recebida.checked = false;
+  document.getElementById('error').innerHTML = "";
   renderizarValores();
+}
+
+function cadastrarCategoria(categoria) {
+  const categorias = JSON.parse(localStorage.getItem("incomingsCategories"));
+  const colors = ['Turquoise', 'Lime', 'Chocolate']
+  categorias[categoria] = colors[Math.round(Math.random() * colors.length - 1)]
+  localStorage.setItem("incomingsCategories", JSON.stringify(categorias))
 }
 
 function showErrorMessage(message) {
@@ -59,12 +77,32 @@ renderizarValores()
 
 function createOptions() {
   const select = document.getElementById("categoria")
+  select.innerHTML = '<option value="" disabled selected>Selecione a categoria</option>'
   const incomingsCategories = JSON.parse(localStorage.getItem("incomingsCategories"));
   Object.keys(incomingsCategories).forEach((categorie) => {
     const option = `<option value=${categorie}>${categorie}</option>`
     select.innerHTML += option
   })
+  const otherOption = document.createElement('option');
+  otherOption.value = "outra";
+  otherOption.innerText = "Outra";
+  select.appendChild(otherOption)
 }
 
 createOptions()
 
+const categorySelect =  document.getElementById("categoria");
+categorySelect.addEventListener("change", (e) => {
+  if (e.target.value === "outra") {
+    const input = document.createElement('input');
+    input.id = "nova-categoria"
+    input.type = "text"
+    input.placeholder = "Digite o nome da nova categoria"
+    categorySelect.after(input)
+  } else {
+    const novaCategoria = document.getElementById("nova-categoria")
+    if (novaCategoria) {
+      novaCategoria.remove()
+    }
+  }
+})

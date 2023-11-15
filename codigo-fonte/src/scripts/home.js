@@ -1,14 +1,12 @@
 /*
 TODO:
 
-Acrecentar select de ano no formulario;
-capturar o envio do formulario em vez da mudaça do select;
-OK permitir mostrar todas as despesas;
+A
 
-filtrar por ano;
-filtrar por mes/ano;
 
-combinar os filtros: mes/ano/categoria
+
+
+combinar os filtros: mes/ano
 
 
 Mostrar dados do usuário logado no cabeçalho;

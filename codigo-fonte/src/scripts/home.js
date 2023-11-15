@@ -1,19 +1,3 @@
-/*
-TODO:
-
-A
-
-
-
-
-combinar os filtros: mes/ano
-
-
-Mostrar dados do usuário logado no cabeçalho;
-
-Implementar logout
-
-*/
 const localStorageExpenses = JSON.parse(localStorage.getItem('expenseCategories'));
 
 const defaultExpenses = {

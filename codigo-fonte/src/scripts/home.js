@@ -61,16 +61,26 @@ const meses = document.getElementById("meses");
 // Adiciona logica de filtrar despesas por mês
 meses.addEventListener('change', (e) => {
   const mesParaFiltrar = e.target.value;
+  if (!mesParaFiltrar) {
+    renderCards(expenses, incomings)
+    renderCharts(expenses, incomings)
+    return;
+  }
   const filteredExpenses = expenses.filter((despesa) => {
     const mesdaDespesa = despesa.date.split("-")[1];
     return  parseInt(mesdaDespesa) === parseInt(mesParaFiltrar)
   })
-  renderCards(filteredExpenses)
-  renderCharts(filteredExpenses)
+  const filteredIncomings = incomings.filter((entrada) => {
+    const mesdaEntrada = entrada.date.split("-")[1];
+    return  parseInt(mesdaEntrada) === parseInt(mesParaFiltrar)
+  })
+  console.log("Receitas filtradas:", filteredIncomings)
+  renderCards(filteredExpenses, filteredIncomings)
+  renderCharts(filteredExpenses, filteredIncomings)
 })
 
 
-function renderCards(expenses) {
+function renderCards(expenses, incomings) {
   // renderização dos cards
   const expensesTotal = expenses.reduce((acc, expense) => parseFloat(expense.value) + acc, 0);
   const incomingsTotal = incomings.reduce((acc, incoming) => parseFloat(incoming.value) + acc, 0);
@@ -87,10 +97,10 @@ function renderCards(expenses) {
   cartão.innerText = formatter.format(cardExpensesTotal);
   saldo.innerText = formatter.format(totalBalance);
 }
-renderCards(expenses)
+renderCards(expenses, incomings)
 
 
-function renderCharts(expenses) {
+function renderCharts(expenses, incomings) {
   console.log("Despesas:", expenses)
   // Despesas formatadas para o gráfico
   const expensesForChart = expenses.map((expense) => (
@@ -136,7 +146,7 @@ function renderCharts(expenses) {
   createLegend(incomingsForChart, incomingLegendList);
 }
 
-renderCharts(expenses)
+renderCharts(expenses, incomings)
 
 
 

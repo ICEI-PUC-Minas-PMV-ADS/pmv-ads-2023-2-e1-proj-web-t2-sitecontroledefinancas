@@ -98,8 +98,7 @@ renderCards(expenses, incomings)
 
 
 function renderCharts(expenses, incomings) {
-  console.log("Despesas:", expenses)
-  // Despesas formatadas para o gráfico
+ // Despesas formatadas para o gráfico
   const expensesForChart = expenses.map((expense) => (
     {...expense,
       value: parseFloat(expense.value),

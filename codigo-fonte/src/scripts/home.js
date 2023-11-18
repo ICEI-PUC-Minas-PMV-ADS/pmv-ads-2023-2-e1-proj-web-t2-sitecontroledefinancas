@@ -1,14 +1,14 @@
 const localStorageExpenses = JSON.parse(localStorage.getItem('expenseCategories'));
 
 const defaultExpenses = {
-  Lazer: 'blue',
-  Moradia: 'red',
-  Pagamentos: 'yellow',
-  Educação: 'orange',
-  Alimentação: 'gray',
-  Saúde: 'black',
-  Transaporte: 'lightblue',
-  Vestuário: 'cyan'
+  Lazer: '#571529',
+  Moradia: '#73262e',
+  Pagamentos: '#a0413a',
+  Educação: '#d0683c',
+  Alimentação: '#e69526',
+  Saúde: '#d17832',
+  Transaporte: '#efb96d',
+  Vestuário: '#fff8b6'
 }
 if (!localStorageExpenses) {
   localStorage.setItem('expenseCategories', JSON.stringify(defaultExpenses))
@@ -18,11 +18,11 @@ const expenseCategories = localStorageExpenses || defaultExpenses;
 
 const localStorageIncomings = JSON.parse(localStorage.getItem('incomingsCategories'));
 const defaultIncomings = {
-  Salário: 'blue',
-  Investimentos: 'gray',
-  Freelancer: 'orange',
-  "Bolsa de estudos": 'yellow',
-  Mesada: "lightblue"
+  Salário: '#05141e',
+  Investimentos: '#132a3f',
+  Freelancer: '#28555f',
+  Bolsa: '#3f7182',
+  Mesada: "#007473"
 }
 if (!localStorageIncomings) {
   localStorage.setItem('incomingsCategories', JSON.stringify(defaultIncomings));

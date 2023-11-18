@@ -42,7 +42,7 @@ function cadastrar(e) {
 
 function cadastrarCategoria(categoria) {
   const categorias = JSON.parse(localStorage.getItem("incomingsCategories"));
-  const colors = ['Turquoise', 'Lime', 'Chocolate']
+  const colors = ['#051b18', '#0c2a21', '#1b3e35', '#5d7a5d', '#99a582']
   categorias[categoria] = colors[Math.round(Math.random() * colors.length - 1)]
   localStorage.setItem("incomingsCategories", JSON.stringify(categorias))
 }

@@ -104,6 +104,20 @@ nav {
   cursor: pointer;
 }
 
+.incomings a.box {
+  font-weight: bolder;
+  font-family: 'GothamBold';
+  background-color: #00AB8E;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.incomings a.box:hover {
+  background-color: #ffffff;
+  color: #00AB8E;
+  border: 1px solid 00AB8E;
+}
+
 .table-outter {
   grid-area: formulario;
   background-color: #E9E9E9;

@@ -103,6 +103,20 @@ nav {
   text-decoration: none;
 }
 
+.expenses a.box {
+  font-weight: bolder;
+  font-family: 'GothamBold';
+  background-color: #00AB8E;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.expenses a.box:hover {
+  background-color: #ffffff;
+  color: #00AB8E;
+  border: 1px solid 00AB8E;
+}
+
 .form-outter {
   grid-area: formulario;
   background-color: #E9E9E9;
@@ -136,7 +150,6 @@ nav {
   margin-left: 75px;
   border-radius: 15px;
   padding: 10px 0;
-  color: red;
 }
 
 form {
@@ -146,6 +159,11 @@ form {
   width: 90%;
   margin: 0 auto;
   justify-content: space-between;
+}
+
+form p {
+  font-size: larger;
+  text-align: center;
 }
 
 form input {
@@ -160,4 +178,31 @@ form input {
   height: 100%;
   width: auto;
   display: inline-block;
+}
+
+
+select {
+  padding: 10px 0;
+  border: none;
+  background-color: #efefef;
+}
+
+
+#cadastrar {
+  background-color: #00AB8E;
+  border: 1px solid #00AB8E;
+  border-radius: 8px;
+  font-family: 'GothamBold';
+  font-weight: bolder;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 10px;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+#cadastrar:hover {
+  background-color: #ffffff;
+  color: #00AB8E;
+  border: 1px solid #00AB8E;
 }

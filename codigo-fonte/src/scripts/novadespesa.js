@@ -29,12 +29,12 @@ function cadastrar(e) {
   if (novaCategoria) {
     cadastrarCategoria(novaCategoria.value);
     createOptions()
+    novaCategoria.remove();
   }
   valor.value = ''
   data.value = ''
   descrição.value = ''
   categoria.value = ''
-  novaCategoria.remove();
   paga.checked = false;
   document.getElementById('error').innerHTML = "";
   renderizarValores();

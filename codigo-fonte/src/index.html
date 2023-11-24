@@ -23,8 +23,6 @@
           </li>
           <li class="nav-item"><a class="nav-item-link" href="/despesas"><img src="./icons/menu/expenses.svg" alt="">
               Despesas</a></li>
-          <li class="nav-item"><a class="nav-item-link" href=""> <img src="./icons/menu/card.svg" alt="">Cartão</a>
-          </li>
           <li class="nav-item"><a class="nav-item-link" href=""> <img src="./icons/menu/profile.svg" alt=""> Meu
               Perfil</a></li>
           <li class="nav-item"><a class="nav-item-link" href="" id="logout">Sair</a></li>
@@ -52,9 +50,14 @@
           <option value="12">Dezembro</option>
         </select>
         <input type="number" min="2000" max="2030" step="1" value="" id="ano" placeholder="Ano" />
-        <input type="submit" value="Filtrar">
-        <button type="reset">Limpar Filtros</button>
+        <input type="submit" value="Filtrar" id="filter">
+        <button type="reset" id="clear">Limpar Filtros</button>
       </form>
+
+      <section id="user">
+        <img src="./icons/menu/profile.png" alt="Imagem de perfil">
+        <h2 id="username"></h2>
+      </section>
     </div>
     <div id="values">
       <div class="mini-box">

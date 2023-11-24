@@ -144,10 +144,6 @@ function renderCharts(expenses, incomings) {
 
 renderCharts(expenses, incomings)
 
-
-
-
-
 // Cria as legendas
 function createLegend(lista, elemento) {
   if (lista.length === 0) {
@@ -176,3 +172,7 @@ function createLegend(lista, elemento) {
     elemento.appendChild(li);
   });
 }
+
+// Mostra o nome do usuario loggado
+const username = document.getElementById("username");
+username.innerText = loggedUser.name;

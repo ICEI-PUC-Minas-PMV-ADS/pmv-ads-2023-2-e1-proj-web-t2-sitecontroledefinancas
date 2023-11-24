@@ -37,6 +37,7 @@ function cadastrar(event) {
 
   // salva no localStorage a informação do usuário logado
   const loggedUser = JSON.stringify({
+    name: name.value,
     email: email.value
   })
   localStorage.setItem('loggedUser', loggedUser);

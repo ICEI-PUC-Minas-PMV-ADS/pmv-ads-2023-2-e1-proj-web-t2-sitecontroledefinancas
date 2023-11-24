@@ -73,6 +73,25 @@ nav {
   height: 100%;
 }
 
+#user {
+  display: flex;
+  align-items: center;
+}
+
+#user img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #00AB8E;
+}
+
+#username {
+  display: inline;
+  color: #00AB8E;
+  margin-left: 10px;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -83,17 +102,58 @@ main {
 
 #form-container {
   margin-bottom: 20px;
-  text-align: center;
-  padding: 15px 0;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#form-container select {
-  border-radius: 10px;
-  border-style: none;
-  padding: 0 30px;
-  font-weight: lighter;
-  text-align: center;
+
+#filter-form select {
+  padding: 10px 0;
+  height: 35px;
+  border: none;
+  background-color: #efefef;
+  border: 1px solid #00AB8E;
+  border-radius: 5px;
 }
+
+#ano {
+  border: 1px solid #00AB8E;
+  border-radius: 5px;
+  height: 35px;
+  background-color: #efefef;
+  padding: 0 10px;
+}
+
+#ano:focus,
+#ano:hover {
+  border: 1px solid #00AB8E;
+}
+
+#filter,
+#clear {
+  background-color: #00AB8E;
+  border: 1px solid #00AB8E;
+  height: 35px;
+  border-radius: 4px;
+  font-family: 'GothamBold';
+  font-weight: bolder;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 10px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  transition: all 400ms;
+}
+
+#filter:hover,
+#clear:hover {
+  background-color: #ffffff;
+  color: #00AB8E;
+  border: 1px solid #00AB8E;
+}
+
 
 #values {
   display: flex;

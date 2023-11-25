@@ -174,10 +174,16 @@ form input {
   background-color: #efefef;
 }
 
-#paga {
+
+#paga,
+#cartao {
   height: 100%;
   width: auto;
   display: inline-block;
+}
+
+#cartao {
+  margin-left: 30px;
 }
 
 

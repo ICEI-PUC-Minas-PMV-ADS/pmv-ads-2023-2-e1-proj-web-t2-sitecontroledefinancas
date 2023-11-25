@@ -8,6 +8,7 @@ function cadastrar(e) {
   const descrição = document.getElementById('descrição');
   const categoria = document.getElementById('categoria');
   const paga = document.getElementById('paga');
+  const cartao = document.getElementById('cartao');
   const novaCategoria = document.getElementById("nova-categoria")
   if(!valor.value || ! data.value || !descrição.value || !categoria.value) {
     showErrorMessage('Preencha todos os campos');
@@ -23,7 +24,8 @@ function cadastrar(e) {
     date: data.value,
     description: descrição.value,
     category: categoria.value === "outra" ? novaCategoria.value : categoria.value,
-    payed: paga.checked
+    payed: paga.checked,
+    card: cartao.checked
   });
   localStorage.setItem('users', JSON.stringify(users));
   if (novaCategoria) {
@@ -108,14 +110,3 @@ categorySelect.addEventListener("change", (e) => {
     }
   }
 })
-
-
-// Outra forma de fazer a mesma coisa
-// function createOptions() {
-//   const select = document.getElementById("categoria")
-//   const expenseCategories = JSON.parse(localStorage.getItem("expenseCategories"));
-//   Object.keys(expenseCategories).forEach((categorie) => {
-//     const option = `<option value=${categorie}>${categorie}</option>`
-//     select.innerHTML += option
-//   })
-// }

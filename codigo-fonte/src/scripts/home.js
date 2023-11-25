@@ -33,9 +33,9 @@ const incomingsCategories = localStorageIncomings || defaultIncomings;
 
 // Capturtando informações de despesas e receitas do local storage
 const users = JSON.parse(localStorage.getItem('users'));
-const expenses = users[loggedUser.email].expenses;
+const expenses = users[loggedUser.email].expenses.filter((expense) => !expense.card);
 const incomings = users[loggedUser.email].incomings;
-const cardExpenses = users[loggedUser.email].cardExpenses;
+const cardExpenses = users[loggedUser.email].expenses.filter((expense) => expense.card);
 const formatter = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'});
 
 const formularioDeFiltro = document.getElementById("filter-form");
@@ -87,15 +87,17 @@ function renderCards(expenses, incomings) {
   // renderização dos cards
   const expensesTotal = expenses.reduce((acc, expense) => parseFloat(expense.value) + acc, 0);
   const incomingsTotal = incomings.reduce((acc, incoming) => parseFloat(incoming.value) + acc, 0);
-  const cardExpensesTotal = cardExpenses.reduce((acc, cardExpense) => cardExpense.value + acc, 0);
+  const cardExpensesTotal = cardExpenses.reduce((acc, cardExpense) => parseFloat(cardExpense.value) + acc, 0);
   const totalBalance  = incomingsTotal - (expensesTotal + cardExpensesTotal);
 
   console.log("expenses total:", expensesTotal)
   console.log("incomings total:", incomingsTotal)
 
-  if (expensesTotal / incomingsTotal >= 0.8) {
+  if ((expensesTotal + cardExpensesTotal) / incomingsTotal >= 0.8) {
     console.log('entrou')
     alerta.style.visibility = 'visible'
+  } else {
+    alerta.style.visibility = 'hidden'
   }
 
 
@@ -114,7 +116,8 @@ renderCards(expenses, incomings)
 
 function renderCharts(expenses, incomings) {
  // Despesas formatadas para o gráfico
-  const expensesForChart = expenses.map((expense) => (
+ const allExpenses = [...expenses, ...cardExpenses]
+  const expensesForChart = allExpenses.map((expense) => (
     {...expense,
       value: parseFloat(expense.value),
       name: expense.description,

@@ -73,24 +73,6 @@ nav {
   height: 100%;
 }
 
-#user {
-  display: flex;
-  align-items: center;
-}
-
-#user img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  display: inline-block;
-  border: 1px solid #00AB8E;
-}
-
-#username {
-  display: inline;
-  color: #00AB8E;
-  margin-left: 10px;
-}
 
 main {
   display: flex;
@@ -154,6 +136,50 @@ main {
   border: 1px solid #00AB8E;
 }
 
+
+#user {
+  display: flex;
+  align-items: center;
+}
+
+#user img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #00AB8E;
+}
+
+#username {
+  display: inline;
+  color: #00AB8E;
+  margin-left: 10px;
+}
+
+
+#alerta {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: bolder;
+  font-size: larger;
+  width: 50%;
+  align-self: center;
+  border: 1px solid red;
+  background-color: #ffffff;
+  color: red;
+  height: 35px;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+#alerta:hover {
+  border: 1px solid #ffffff;
+
+  background-color: red;
+  color: #ffffff;
+}
 
 #values {
   display: flex;

@@ -40,6 +40,12 @@ const formatter = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: '
 
 const formularioDeFiltro = document.getElementById("filter-form");
 
+// esconde o alerta de gastos
+const alerta = document.getElementById("alerta");
+alerta.addEventListener("click", (e) => {
+  alerta.style.visibility = "hidden";
+})
+
 // Adiciona logica de filtrar despesas por mês
 formularioDeFiltro.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -84,6 +90,15 @@ function renderCards(expenses, incomings) {
   const cardExpensesTotal = cardExpenses.reduce((acc, cardExpense) => cardExpense.value + acc, 0);
   const totalBalance  = incomingsTotal - (expensesTotal + cardExpensesTotal);
 
+  console.log("expenses total:", expensesTotal)
+  console.log("incomings total:", incomingsTotal)
+
+  if (expensesTotal / incomingsTotal >= 0.8) {
+    console.log('entrou')
+    alerta.style.visibility = 'visible'
+  }
+
+
   const receitas = document.getElementById('receitas');
   const despesas = document.getElementById('despesas');
   const cartão = document.getElementById('cartão');
@@ -122,7 +137,7 @@ function renderCharts(expenses, incomings) {
     size: 200,
     weight: 30,
     data: expensesForChart.length > 0 ? expensesForChart : [{value: 100}],
-    colors: expensesForChart.length > 0 ? expensesForChart.map((expense) => expense.color) : ['yellow']
+    colors: expensesForChart.length > 0 ? expensesForChart.map((expense) => expense.color) : ['#5cf3a8']
   });
 
   // Grafico de Receitas
@@ -132,7 +147,7 @@ function renderCharts(expenses, incomings) {
     size: 200,
     weight: 30,
     data: incomingsForChart.length > 0 ? [...incomingsForChart] : [{value: 100}],
-    colors: incomingsForChart.length > 0 ? incomingsForChart.map((incoming) => incoming.color) : ['yellow']
+    colors: incomingsForChart.length > 0 ? incomingsForChart.map((incoming) => incoming.color) : ['#5cf3a8']
   });
   const legendList = document.getElementById("expenses-legend-list");
   legendList.innerHTML = ""
@@ -151,7 +166,7 @@ function createLegend(lista, elemento) {
     li.classList.add("chart-legend-item");
     const span = document.createElement('span');
     span.className = "chart-legend-icon";
-    span.style.backgroundColor = "yellow";
+    span.style.backgroundColor = "#5cf3a8";
     li.appendChild(span);
     const textSpan = document.createElement('span');
     textSpan.innerText = "Não há informações cadastradas";
@@ -176,3 +191,4 @@ function createLegend(lista, elemento) {
 // Mostra o nome do usuario loggado
 const username = document.getElementById("username");
 username.innerText = loggedUser.name;
+

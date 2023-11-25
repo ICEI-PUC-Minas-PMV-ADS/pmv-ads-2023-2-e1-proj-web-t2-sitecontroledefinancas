@@ -20,17 +20,22 @@ salvar.addEventListener("click", (e) => {
   }
 
   const users = JSON.parse(localStorage.getItem('users'));
-  users[loggedUser.email].data = {
-    ...users[loggedUser.email].data,
-    name,
-    nomeSocial,
-    email,
-    password,
-    escolaridade,
-    profissao,
-    renda,
-    faixaDeRenda
-  }
+  users[email] = {
+    ...users[loggedUser.email],
+    data: {
+      ...(users[loggedUser.email].data),
+      name,
+      nomeSocial,
+      email,
+      password,
+      escolaridade,
+      profissao,
+      renda,
+      faixaDeRenda
+    }
+}
+
+  delete users[loggedUser.email]
 
   const updatedLoggedUser = {
     name,

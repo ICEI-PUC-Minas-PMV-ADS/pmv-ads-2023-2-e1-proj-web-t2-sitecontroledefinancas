@@ -195,3 +195,6 @@ function createLegend(lista, elemento) {
 const username = document.getElementById("username");
 username.innerText = loggedUser.name;
 
+const userSection = document.getElementById("user")
+userSection.style.cursor = 'pointer'
+userSection.addEventListener("click", () => window.location.href = "/perfil")

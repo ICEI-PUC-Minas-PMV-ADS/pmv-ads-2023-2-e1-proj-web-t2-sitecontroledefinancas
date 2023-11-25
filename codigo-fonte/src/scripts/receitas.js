@@ -1,12 +1,12 @@
 const users = JSON.parse(localStorage.getItem('users'));
-const incomings = users[loggedUser.email].incomings;
+let incomingsData = users[loggedUser.email].incomings;
 
-function renderizarValores() {
+function renderizarValores(incomings) {
   const recebidas = document.getElementById('recebidas');
   const pendentes = document.getElementById('pendentes');
   const total = document.getElementById('total');
-  const receitasRecebidas = incomings.filter((incoming) => incoming.payed)
-  const receitasPendentes = incomings.filter((incoming) => !incoming.payed);
+  const receitasRecebidas = incomings.filter((incoming) => incoming.received)
+  const receitasPendentes = incomings.filter((incoming) => !incoming.received);
   const formatter = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'});
   const totalDespesasRecebidas = receitasRecebidas.reduce((acc, incoming) => parseFloat(incoming.value) + acc, 0);
   const totalDespesasPendentes = receitasPendentes.reduce((acc, incoming) => parseFloat(incoming.value) + acc, 0);
@@ -16,21 +16,63 @@ function renderizarValores() {
   total.innerText = formatter.format(totalDespesas);
 }
 
-renderizarValores()
+renderizarValores(incomingsData)
 
-const table = document.getElementById('tabela-receitas');
-const formatter = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'});
+function renderTable() {
+  const tableBody = document.getElementById("table-body");
+  tableBody.innerHTML = ""
+  const formatter = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'});
+  incomingsData.forEach((receita) => {
+    const th = document.createElement('th');
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+    <td>${receita.date}</td>
+    <td>${receita.description}</td>
+    <td>${receita.category}</td>
+    <td>${formatter.format(receita.value)}</td>
+    <td>${receita.received ? "Recebida" : "Pendente" }</td>
+    <td class="delete" data-value=${receita.id}>X</td>
+    ${ receita.received ? "" : '<td class="receive" data-value=' + receita.id +'>O</td>'}
+  `;
+    tableBody.appendChild(tr);
+  })
+  const deleteButtons = document.querySelectorAll('.delete')
+  deleteButtons.forEach((deleteButton) => {
+    if(deleteButton) {
+      deleteButton.style.cursor = 'pointer'
+      deleteButton.addEventListener('click', (e) => {
+        id = e.target.getAttribute("data-value")
+        incomingsData = incomingsData.filter((incoming) => incoming.id != id)
+        users[loggedUser.email].incomings = incomingsData;
+        localStorage.setItem('users', JSON.stringify(users))
+        renderizarValores(incomingsData)
+        renderTable()
+      })
+  }})
+  const receiveButtons = document.querySelectorAll('.receive')
+  receiveButtons.forEach((receiveButton) => {
+    if(receiveButton){
+      receiveButton.style.cursor = 'pointer'
+      receiveButton.addEventListener('click', (e) => {
+        console.log("entrou")
+        id = e.target.getAttribute("data-value")
+        incomingsData = incomingsData.map((incoming) => {
+          if (incoming.id == id) {
+            return { ...incoming, received: true}
+          }
+          return incoming
+        })
+        console.log(incomingsData)
+        users[loggedUser.email].incomings = incomingsData;
+        localStorage.setItem('users', JSON.stringify(users))
+        renderizarValores(incomingsData)
+        renderTable()
+      })
+    }
+  })
+}
 
-incomings.forEach((receita) => {
-  const th = document.createElement('th');
-  th.innerHTML
-  const tr = document.createElement('tr');
-  tr.innerHTML = `
-  <td>${receita.date}</td>
-  <td>${receita.description}</td>
-  <td>${receita.category}</td>
-  <td>${formatter.format(receita.value)}</td>
-  <td>${receita.received ? "Recebida" : "Pendente" }</td>
-`;
-  table.appendChild(tr);
-})
+renderTable()
+
+
+

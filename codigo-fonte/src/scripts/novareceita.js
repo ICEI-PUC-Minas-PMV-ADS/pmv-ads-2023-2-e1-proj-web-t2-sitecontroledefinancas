@@ -19,6 +19,7 @@ function cadastrar(e) {
   }
   const users = JSON.parse(localStorage.getItem('users'));
   users[loggedUser.email].incomings.push({
+    id: new Date().getTime(),
     value: valor.value,
     date: data.value,
     description: descrição.value,

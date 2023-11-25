@@ -106,6 +106,10 @@ main {
   margin-left: 10px;
 }
 
+#user p span {
+  font-weight: bolder;
+}
+
 #atualizar {
   padding: 15px 10px;
   border-style: none;

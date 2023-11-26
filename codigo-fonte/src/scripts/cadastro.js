@@ -30,7 +30,6 @@ function cadastrar(event) {
     },
     expenses: [],
     incomings: [],
-    cardExpenses: []
   }
   // salva o objeto users no localStorage
   localStorage.setItem('users', JSON.stringify(users));

@@ -27,7 +27,7 @@ Os resultados dos testes funcionais realizados na aplicação são descritos a s
 
 |Caso de Teste    | CT-04 - Teste da página "Despesas" |
 |:---|:---|
-| Resultados obtidos |  |
+| Resultados obtidos | Todos as etapas do teste foram bem sucedidos conforme descritos no documento de Plano de Testes de Software, exceto pelos teste de responsividade, dado que ainda não foi implementada. |
 | Responsável pela execução do caso de Teste | Elismar |
 
  ![Caso de Teste da Página de "Despesas](./img/CT-04.gif)

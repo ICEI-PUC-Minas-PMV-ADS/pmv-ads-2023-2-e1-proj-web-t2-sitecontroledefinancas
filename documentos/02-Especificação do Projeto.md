@@ -57,12 +57,12 @@
 | RF-05 | O site deve permitir a visualização completa de receitas e despesas na página inicial do usuário logado | Alta |
 | RF-06 | O site deve permitir que as despesas sejam categorizadas de acordo com critérios pré-estabelecidos | Alta |
 | RF-07 | O site deve permitir que os usuários cadastrem novas categorias para as despesas | Alta |
-| RF-08 | O site deve permitir que as categorias de despesas sejam classificadas entre essenciais e não essenciais | Alta |
+| RF-08 | O site deve permitir que as receitas sejam categorizadas de acordo com critérios pré-estabelecidos | Alta |
 | RF-09 | O site deve exibir um aviso caso as contas estiverem próximas de vencimento  | Baixa |
 | RF-10 | O site deve exibir um gráfico com as entradas, despesas e investimentos cadastrados pelo usuário | Alta |
-| RF-11 | O site deve permitir ao usuário visualizar as informações de acordo com critérios específicos (mês, ano, entradas, despesas, investimentos, classificação, etc) | Alta |
+| RF-11 | O site deve permitir ao usuário visualizar as informações de acordo com critérios específicos (mês, ano) | Alta |
 | RF-12 | O site deve exibir um aviso caso as despesas atinjam 80% da receita do mês | Baixa |
-| RF-13 | O site deve exibir uma mensagem de incentivo caso as despesas não ultrapassem as entradas do mês | Baixa |
+| RF-13 | O site deve permitir que o usuário atualize as informações de seu perfil | Baixa |
 
 
 **Prioridade: Alta / Média / Baixa.

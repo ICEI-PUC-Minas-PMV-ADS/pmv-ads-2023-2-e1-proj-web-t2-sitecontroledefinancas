@@ -27,28 +27,27 @@ Os resultados dos testes funcionais realizados na aplicação são descritos a s
 
 |Caso de Teste    | CT-03 - Teste da página “Home" |
 |:---|:---|
-| Resultados obtidos |  |
-| Responsável pela execução do caso de Teste | |
+| Resultados obtidos | Todos as etapas do teste foram bem sucedidos conforme descritos no documento de Plano de Testes de Software, exceto pelos teste deesponsividade, dado que ainda não foi implementada. |
+| Responsável pela execução do caso de Teste | Simon |
 
- ![Texto Alternativo](caminho/para/a/imagem.png)
+ ![Caso de teste da Página "Home"](./img/CT-03.gif)
 
 |Caso de Teste    | CT-04 - Teste da página "Despesas" |
 |:---|:---|
 | Resultados obtidos |  |
 | Responsável pela execução do caso de Teste | |
 
- ![Texto Alternativo](caminho/para/a/imagem.png)
+ ![Caso de Teste da Página de "Despesas](./img/CT-04.gif)
 
 |Caso de Teste    | CT-05 - Teste da página "Receitas"" |
 |:---|:---|
-| Resultados obtidos |  |
-| Responsável pela execução do caso de Teste | |
+| Resultados obtidos | Todos as etapas do teste foram bem sucedidos conforme descritos no documento de Plano de Testes de Software, exceto pelos teste deesponsividade, dado que ainda não foi implementada. | Rafael |
 
- ![Texto Alternativo](caminho/para/a/imagem.png)
+ ![Caso de Teste da Página de "Receitas"](./img/CT-05.gif)
 
 |Caso de Teste    | CT-06 - Teste da página "Meu Perfil"" |
 |:---|:---|
-| Resultados obtidos |  |
-| Responsável pela execução do caso de Teste | |
+| Resultados obtidos | Todos as etapas do teste foram bem sucedidos conforme descritos no documento de Plano de Testes de Software, exceto pelos teste deesponsividade, dado que ainda não foi implementada. |
+| Responsável pela execução do caso de Teste | Rafael |
 
- ![Texto Alternativo](caminho/para/a/imagem.png)
+ ![Caso de Teste da Página "Meu Perfil"](./img/CT-06.gif)

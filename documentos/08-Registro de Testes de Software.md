@@ -4,26 +4,19 @@ Relatório com as evidências dos testes de software realizados na aplicação p
 
 Os resultados dos testes funcionais realizados na aplicação são descritos a seguir. [Utilize a estrutura abaixo para cada caso de teste executado]
 
-|Caso de Teste    | CT-X - Teste da página “Login" |
-|:---|:---|
-| Resultados obtidos |  |
-| Responsável pela execução do caso de Teste | |
-
- ![Texto Alternativo](caminho/para/a/imagem.png)
-
 |Caso de Teste    | CT-01 - Teste da página “Login" |
 |:---|:---|
-| Resultados obtidos | Descrever resultados do teste  |
-| Responsável pela execução do caso de Teste | Nome do integrante da equipe |
+| Resultados obtidos | Todos as etapas do teste foram bem sucedidos conforme descritos no documento de Plano de Testes de Software, exceto pelos teste deesponsividade, dado que ainda não foi implementada.  |
+| Responsável pela execução do caso de Teste | Elismar |
 
- ![Texto Alternativo](caminho/para/a/imagem.png)
+ ![Caso de teste da Página "Login"](./img/CT-01.gif)
 
 |Caso de Teste    | CT-02 - Teste da página "Cadastro"  |
 |:---|:---|
-| Resultados obtidos | Descrever resultados do teste  |
-| Responsável pela execução do caso de Teste | Nome do integrante da equipe |
+| Resultados obtidos | Todos as etapas do teste foram bem sucedidos conforme descritos no documento de Plano de Testes de Software, exceto pelos teste deesponsividade, dado que ainda não foi implementada.  |
+| Responsável pela execução do caso de Teste | Pedro |
 
- ![Texto Alternativo](caminho/para/a/imagem.png)
+ ![Caso de teste da Página "Cadastro"](./img/CT-02.gif)
 
 |Caso de Teste    | CT-03 - Teste da página “Home" |
 |:---|:---|
@@ -35,7 +28,7 @@ Os resultados dos testes funcionais realizados na aplicação são descritos a s
 |Caso de Teste    | CT-04 - Teste da página "Despesas" |
 |:---|:---|
 | Resultados obtidos |  |
-| Responsável pela execução do caso de Teste | |
+| Responsável pela execução do caso de Teste | Elismar |
 
  ![Caso de Teste da Página de "Despesas](./img/CT-04.gif)
 

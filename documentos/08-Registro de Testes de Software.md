@@ -34,7 +34,8 @@ Os resultados dos testes funcionais realizados na aplicação são descritos a s
 
 |Caso de Teste    | CT-05 - Teste da página "Receitas"" |
 |:---|:---|
-| Resultados obtidos | Todos as etapas do teste foram bem sucedidos conforme descritos no documento de Plano de Testes de Software, exceto pelos teste de responsividade, dado que ainda não foi implementada. | Rafael |
+| Resultados obtidos | Todos as etapas do teste foram bem sucedidos conforme descritos no documento de Plano de Testes de Software, exceto pelos teste de responsividade, dado que ainda não foi implementada. |
+| Responsável pela execução do caso de Teste | Felipe |
 
  ![Caso de Teste da Página de "Receitas"](./img/CT-05.gif)
 

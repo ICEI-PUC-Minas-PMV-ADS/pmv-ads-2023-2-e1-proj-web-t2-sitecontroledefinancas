@@ -78,13 +78,13 @@ form {
   padding: 40px 20px;
   border-radius: 30px;
   width: 35vw;
-  height: 80vh;
+  height: 600px;
   background-color: #ffffff;
 
 }
 
 input {
-  padding: 15px 10px 15px 30px;
+  padding: 15px 10px 15px 50px;
   margin-top: 20px;
   border-style: none;
   border-radius: 5px;
@@ -198,4 +198,19 @@ button {
   font-family: 'GothamBold';
   cursor: pointer;
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    left: 10%;
+    width: 80vw;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  form {
+    left: 0;
+    width: 100vw
+  }
 }

@@ -31,17 +31,17 @@ function renderTable() {
     <td>${despesa.category}</td>
     <td>${formatter.format(despesa.value)}</td>
     <td>${despesa.payed ? "Paga" : "Pendente" }</td>
-    <td class="delete" data-value=${despesa.id}>X</td>
-    ${ despesa.payed ? "" : '<td class="pagar" data-value=' + despesa.id +'>O</td>'}
+    <td class="delete" data-value=${despesa.id}><i class="fa-solid fa-trash"></i></td>
+    ${ despesa.payed ? "" : '<td class="pagar" data-value=' + despesa.id +'><i class="fa-solid fa-check"></i></td>'}
   `;
   tableBody.appendChild(tr);
 })
-const deleteButtons = document.querySelectorAll('.delete')
+const deleteButtons = document.querySelectorAll('.fa-trash')
   deleteButtons.forEach((deleteButton) => {
     if(deleteButton) {
       deleteButton.style.cursor = 'pointer'
       deleteButton.addEventListener('click', (e) => {
-        id = e.target.getAttribute("data-value")
+        id = e.target.closest('td').getAttribute("data-value")
         expensesData = expensesData.filter((expense) => expense.id != id)
         users[loggedUser.email].expenses = expensesData;
         localStorage.setItem('users', JSON.stringify(users))
@@ -49,13 +49,13 @@ const deleteButtons = document.querySelectorAll('.delete')
         renderTable()
       })
   }})
-  const pagarButtons = document.querySelectorAll('.pagar')
+  const pagarButtons = document.querySelectorAll('.fa-check')
   pagarButtons.forEach((pagarButton) => {
     if(pagarButton){
       pagarButton.style.cursor = 'pointer'
       pagarButton.addEventListener('click', (e) => {
         console.log("entrou")
-        id = e.target.getAttribute("data-value")
+        id = e.target.closest('td').getAttribute("data-value")
         expensesData = expensesData.map((expense) => {
           if (expense.id == id) {
             return { ...expense, payed: true}

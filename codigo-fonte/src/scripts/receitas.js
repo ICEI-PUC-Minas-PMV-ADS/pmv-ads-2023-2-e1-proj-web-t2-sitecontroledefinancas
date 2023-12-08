@@ -31,17 +31,17 @@ function renderTable() {
     <td>${receita.category}</td>
     <td>${formatter.format(receita.value)}</td>
     <td>${receita.received ? "Recebida" : "Pendente" }</td>
-    <td class="delete" data-value=${receita.id}>X</td>
-    ${ receita.received ? "" : '<td class="receive" data-value=' + receita.id +'>O</td>'}
+    <td class="delete" data-value=${receita.id}><i class="fa-solid fa-trash"></i></td>
+    ${ receita.received ? "" : '<td class="receive" data-value=' + receita.id +'><i class="fa-solid fa-check"></i></td>'}
   `;
     tableBody.appendChild(tr);
   })
-  const deleteButtons = document.querySelectorAll('.delete')
+  const deleteButtons = document.querySelectorAll('.fa-trash')
   deleteButtons.forEach((deleteButton) => {
     if(deleteButton) {
       deleteButton.style.cursor = 'pointer'
       deleteButton.addEventListener('click', (e) => {
-        id = e.target.getAttribute("data-value")
+        id = e.target.closest('td').getAttribute("data-value")
         incomingsData = incomingsData.filter((incoming) => incoming.id != id)
         users[loggedUser.email].incomings = incomingsData;
         localStorage.setItem('users', JSON.stringify(users))
@@ -49,13 +49,13 @@ function renderTable() {
         renderTable()
       })
   }})
-  const receiveButtons = document.querySelectorAll('.receive')
+  const receiveButtons = document.querySelectorAll('.fa-check')
   receiveButtons.forEach((receiveButton) => {
     if(receiveButton){
       receiveButton.style.cursor = 'pointer'
       receiveButton.addEventListener('click', (e) => {
         console.log("entrou")
-        id = e.target.getAttribute("data-value")
+        id = e.target.closest('td').getAttribute("data-value")
         incomingsData = incomingsData.map((incoming) => {
           if (incoming.id == id) {
             return { ...incoming, received: true}
